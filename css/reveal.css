@@ -1423,6 +1423,86 @@ body {
     border: none;
     box-shadow: none;
 }
+
+/*
+* Overview thumbs
+*/
+
+ul.thumbs li {
+    display: inline-block;
+    width: 50%;
+    float: left;
+    text-align: center;
+    padding-top: 200px;
+
+    background-size: 150px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    -webkit-animation: bounce 20s infinite;
+
+            animation: bounce 20s infinite;
+}
+
+ul.thumbs li.earth {
+    -webkit-animation-delay: 3s;
+            animation-delay: 3s;
+    background-image: url(../img/earth.png);
+}
+
+ul.thumbs li.mars {
+    -webkit-animation-delay: 5s;
+            animation-delay: 5s;
+    background-image: url(../img/mars.png);
+}
+
+ul.thumbs li.jupiter {
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+    background-image: url(../img/jupiter.png);
+}
+
+ul.thumbs li.gamma {
+    -webkit-animation-delay: 10s;
+            animation-delay: 10s;
+    background-image: url(../img/gamma.png);
+}
+
+@-webkit-keyframes bounce {
+    0% {
+        background-position: center center;
+    }
+    25% {
+        background-position: center -1px;
+    }
+    50% {
+        background-position: center center;
+    }
+    75% {
+        background-position: center 1px;
+    }
+    100% {
+        background-position: center center;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        background-position: center center;
+    }
+    25% {
+        background-position: center -1px;
+    }
+    50% {
+        background-position: center center;
+    }
+    75% {
+        background-position: center 1px;
+    }
+    100% {
+        background-position: center center;
+    }
+}
 /**********************************************
 Credit to http://codepen.io/saransh/pen/BKJun
 *********************************************/
