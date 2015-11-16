@@ -1,6 +1,6 @@
 ## To infinity and beyond on a web development spaceship
 
-[Boot.ini](https://student.ikdoeict.be/index.php?module=bootini)
+Our presentation for [Boot.ini](https://student.ikdoeict.be/index.php?module=bootini).
 
 ## Install
 
@@ -23,3 +23,8 @@
    ```sh
    $ grunt serve
    ```
+
+## Authors
+
+* [Anthony Meirlaen](https://github.com/Toinne)
+* [Hans Ott](https://github.com/hansott)
