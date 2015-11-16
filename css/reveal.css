@@ -1425,6 +1425,34 @@ body {
 }
 
 /*
+* About
+*/
+
+section.about {
+    position: relative;
+}
+
+section.about .hans {
+    position: absolute;
+    width: 128px;
+    height: 128px;
+    left: 0;
+    bottom: 0;
+
+    background: url('../img/hans.png') no-repeat;
+}
+
+section.about .anthony {
+    position: absolute;
+    width: 128px;
+    height: 128px;
+    right: 0;
+    bottom: 0;
+
+    background: url('../img/anthony.png') no-repeat;
+}
+
+/*
 * Overview thumbs
 */
 
