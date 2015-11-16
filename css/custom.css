@@ -1,0 +1,65 @@
+/*
+* Custom flavour
+*/
+
+body {
+    -webkit-font-smoothing: antialiased;
+    padding: 0;
+    margin: 0;
+}
+
+/*
+* Buzz lightyear
+*/
+
+.buzz {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+
+    display: block;
+    background: url('../img/buzz-medium.png') no-repeat;
+    background-size: 20vw;
+    width: 20vw;
+    height: 100vh;
+    position: fixed;
+
+    left: -20vw;
+    top: 100vh;
+
+    animation-name: fly;
+    animation-duration: 10s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+    /*animation-iteration-count: 3;*/
+}
+
+
+@keyframes fly {
+    0%   {
+        left: -20vw;
+        top: 100vh;
+    }
+    50%  {
+        left: -5vw;
+        top: 50vh;
+        background-size: 20vw;
+    }
+    100% {
+        background-size: 0vw;
+        left: 10vw;
+        top: 0vh;
+    }
+}
+
+/*
+* Earth image
+*/
+
+.reveal section img.earth {
+     margin: 0;
+     background: inherit;
+     border: none;
+     box-shadow: none;
+}
