@@ -54,12 +54,12 @@ body {
 }
 
 /*
-* Earth image
+* Remove all image styles
 */
 
-.reveal section img.earth {
-     margin: 0;
-     background: inherit;
-     border: none;
-     box-shadow: none;
+.reveal section img.no-styles {
+    margin: 0;
+    background: inherit;
+    border: none;
+    box-shadow: none;
 }
