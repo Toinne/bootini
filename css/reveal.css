@@ -1474,123 +1474,200 @@ ul.thumbs li h6 {
 
 ul.thumbs li img {
     width: 180px;
-    -webkit-transition: 3s;
-            transition: 3s;
-    -webkit-animation: spin 150s infinite;
-            animation: spin 150s infinite;
+    -webkit-animation: planet-bounce 3s infinite;
+            animation: planet-bounce 3s infinite;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
 }
 
-ul.thumbs li:first-child img {
-    -webkit-animation: spin 130s infinite;
-            animation: spin 130s infinite;
+@-webkit-keyframes planet-bounce {
+    from {
+        -webkit-transform: translateY(-12px);
+                transform: translateY(-12px);
+    }
+    to {
+        -webkit-transform: rotate(359deg);
+                transform: rotate(359deg);
+    }
 }
 
-ul.thumbs li:nth-child(3) img {
-    -webkit-animation: spin-reverse 180s infinite;
-            animation: spin-reverse 180s infinite;
+@keyframes planet-bounce {
+    from {
+        -webkit-transform: translateY(-12px);
+                transform: translateY(-12px);
+    }
+    to {
+        -webkit-transform: rotate(359deg);
+                transform: rotate(359deg);
+    }
 }
 
-img.spin {
-    -webkit-animation: spin 360s infinite;
-            animation: spin 360s infinite;
+/*
+* Landscape overrides
+*/
+
+html.earth-landscape .space {
+    background: -webkit-linear-gradient(top, #152c3e, #37618a) !important;
 }
 
+html.earth-landscape .stars, html.earth-landscape .stars2, html.earth-landscape .stars3 {
+    /*display: none;*/
+}
+
+html.earth-landscape.mars-modifier #ground {
+    background: #B5623F;
+}
+
+html.earth-landscape.mars-modifier .trees {
+    visibility: hidden;
+}
+
+html.earth-landscape.mars-modifier #apex {
+    visibility: hidden;
+}
+
+html.earth-landscape.mars-modifier #cloud1 {
+    visibility: hidden;
+}
+
+html.earth-landscape.mars-modifier #cloud2 {
+    visibility: hidden;
+}
+
+html.earth-landscape.mars-modifier #hills {
+    visibility: hidden;
+}
+
+html.earth-landscape.mars-modifier #mountains {
+    margin-bottom: -100px;
+}
+
+html.earth-landscape.mars-modifier #mountains2 {
+    visibility: visible;
+    -webkit-transform: scale(0.2, 0.1);
+        -ms-transform: scale(0.2, 0.1);
+            transform: scale(0.2, 0.1);
+    margin-bottom: -190px;
+}
 @-webkit-keyframes bounce {
-    0% {
+    from {
         -webkit-transform: translateY(0px);
-                transform: translateY(0px);
+        transform: translateY(0px);
     }
-    20% {
-        -webkit-transform: translateY(5px);
-                transform: translateY(5px);
-    }
-    40% {
-        -webkit-transform: translateY(2px);
-                transform: translateY(2px);
-    }
-    60% {
-        -webkit-transform: translateY(-6px);
-                transform: translateY(-6px);
-    }
-    80% {
-        -webkit-transform: translateY(-3px);
-                transform: translateY(-3px);
-    }
-    100% {
-        -webkit-transform: translateY(0px);
-                transform: translateY(0px);
+    to {
+        -webkit-transform: translateY(-4px);
+        transform: translateY(-4px);
     }
 }
 
 @keyframes bounce {
-    0% {
+    from {
         -webkit-transform: translateY(0px);
-                transform: translateY(0px);
+        transform: translateY(0px);
     }
-    20% {
-        -webkit-transform: translateY(5px);
-                transform: translateY(5px);
+    to {
+        -webkit-transform: translateY(-4px);
+        transform: translateY(-4px);
     }
-    40% {
-        -webkit-transform: translateY(2px);
-                transform: translateY(2px);
+}
+@-webkit-keyframes sway {
+    from {
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
     }
-    60% {
-        -webkit-transform: translateY(-6px);
-                transform: translateY(-6px);
+    to {
+        -webkit-transform: translateX(-12px);
+        transform: translateX(-12px);
     }
-    80% {
-        -webkit-transform: translateY(-3px);
-                transform: translateY(-3px);
+}
+@keyframes sway {
+    from {
+        -webkit-transform: translateX(0px);
+        transform: translateX(0px);
     }
-    100% {
-        -webkit-transform: translateY(0px);
-                transform: translateY(0px);
+    to {
+        -webkit-transform: translateX(-12px);
+        transform: translateX(-12px);
     }
 }
 
-@-webkit-keyframes spin-reverse {
-    from {
-        -webkit-transform: rotate(359deg);
-                transform: rotate(359deg);
-    }
-    to {
-        -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-    }
+html .landscape {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: visibility 0s, opacity 0.5s linear;
+            transition: visibility 0s, opacity 0.5s linear;
 }
 
-@keyframes spin-reverse {
-    from {
-        -webkit-transform: rotate(359deg);
-                transform: rotate(359deg);
-    }
-    to {
-        -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-    }
+html.earth-landscape .landscape {
+    opacity: 1;
+    visibility: visible;
 }
 
-@-webkit-keyframes spin {
-    from {
-        -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-    }
-    to {
-        -webkit-transform: rotate(359deg);
-                transform: rotate(359deg);
-    }
+html.earth-landscape #mountains {
+    z-index: 2;
+    position: absolute;
+    bottom: 20%;
+    margin-bottom: -16px;
+    left: 10%;
 }
 
-@keyframes spin {
-    from {
-        -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-    }
-    to {
-        -webkit-transform: rotate(359deg);
-                transform: rotate(359deg);
-    }
+html.earth-landscape #mountains2 {
+    z-index: 2;
+    position: absolute;
+    bottom: 20%;
+    margin-bottom: -70px;
+    right: 5%;
+    visibility: hidden;
+}
+
+html.earth-landscape #cloud1 {
+    z-index: 2;
+    position: absolute;
+    top: 20%;
+    right: 4%;
+    -webkit-animation: bounce 2s ease-in-out 0s infinite alternate;
+    animation: bounce 2s ease-in-out 0s infinite alternate;
+}
+
+html.earth-landscape #cloud2 {
+    z-index: 1;
+    position: absolute;
+    top: 22%;
+    right: 16%;
+    -webkit-animation: bounce 3.5s ease-in-out 2s infinite alternate;
+    animation: bounce 3.5s ease-in-out 2s infinite alternate;
+}
+
+html.earth-landscape .trees {
+    width: 100%;
+    height: 130px;
+    z-index: 4;
+    position: absolute;
+    bottom: 20%;
+    margin-bottom: -100px;
+}
+
+html.earth-landscape #ground {
+    z-index: 1;
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    bottom: 0;
+    background: #879759;
+}
+
+html.earth-landscape #hills {
+    position: absolute;
+    left: 10%;
+    margin-left: -120px;
+    margin-bottom: -86px;
+    bottom: 20%;
+    z-index: 3;
+}
+
+html.earth-landscape #stars {
+    width: 100%;
+    height: 100%;
 }
 /**********************************************
 Credit to http://codepen.io/saransh/pen/BKJun
@@ -1703,7 +1780,12 @@ Credit to http://codepen.io/saransh/pen/BKJun
     }
 }
 
-.stop-animation .stars, .stop-animation .stars2, .stop-animation .stars3 {
+.stars, .stars2, .stars3 {
     -webkit-animation-play-state: paused;
             animation-play-state: paused;
+}
+
+.play-animation .stars, .play-animation .stars2, .play-animation .stars3 {
+    -webkit-animation-play-state: running;
+            animation-play-state: running;
 }

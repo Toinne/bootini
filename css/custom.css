@@ -114,70 +114,13 @@ ul.thumbs li h6 {
 
 ul.thumbs li img {
     width: 180px;
-    transition: 3s;
-    animation: spin 150s infinite;
+    animation: planet-bounce 3s infinite;
+    animation-direction: alternate;
 }
 
-ul.thumbs li:first-child img {
-    animation: spin 130s infinite;
-}
-
-ul.thumbs li:nth-child(3) img {
-    animation: spin-reverse 180s infinite;
-}
-
-img.spin {
-    -webkit-animation: spin 360s infinite;
-            animation: spin 360s infinite;
-}
-
-@keyframes bounce {
-    0% {
-        transform: translateY(0px);
-    }
-    20% {
-        transform: translateY(5px);
-    }
-    40% {
-        transform: translateY(2px);
-    }
-    60% {
-        transform: translateY(-6px);
-    }
-    80% {
-        transform: translateY(-3px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
-}
-
-@-webkit-keyframes spin-reverse {
+@keyframes planet-bounce {
     from {
-        -webkit-transform: rotate(359deg);
-                transform: rotate(359deg);
-    }
-    to {
-        -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-    }
-}
-
-@keyframes spin-reverse {
-    from {
-        -webkit-transform: rotate(359deg);
-                transform: rotate(359deg);
-    }
-    to {
-        -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-    }
-}
-
-@-webkit-keyframes spin {
-    from {
-        -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
+        transform: translateY(-12px);
     }
     to {
         -webkit-transform: rotate(359deg);
@@ -185,13 +128,48 @@ img.spin {
     }
 }
 
-@keyframes spin {
-    from {
-        -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-    }
-    to {
-        -webkit-transform: rotate(359deg);
-                transform: rotate(359deg);
-    }
+/*
+* Landscape overrides
+*/
+
+html.earth-landscape .space {
+    background: -webkit-linear-gradient(top, #152c3e, #37618a) !important;
+}
+
+html.earth-landscape .stars, html.earth-landscape .stars2, html.earth-landscape .stars3 {
+    /*display: none;*/
+}
+
+html.earth-landscape.mars-modifier #ground {
+    background: #B5623F;
+}
+
+html.earth-landscape.mars-modifier .trees {
+    visibility: hidden;
+}
+
+html.earth-landscape.mars-modifier #apex {
+    visibility: hidden;
+}
+
+html.earth-landscape.mars-modifier #cloud1 {
+    visibility: hidden;
+}
+
+html.earth-landscape.mars-modifier #cloud2 {
+    visibility: hidden;
+}
+
+html.earth-landscape.mars-modifier #hills {
+    visibility: hidden;
+}
+
+html.earth-landscape.mars-modifier #mountains {
+    margin-bottom: -100px;
+}
+
+html.earth-landscape.mars-modifier #mountains2 {
+    visibility: visible;
+    transform: scale(0.2, 0.1);
+    margin-bottom: -190px;
 }
