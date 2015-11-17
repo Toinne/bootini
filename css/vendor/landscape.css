@@ -59,6 +59,15 @@ html.earth-landscape #mountains {
     left: 10%;
 }
 
+html.earth-landscape #mountains2 {
+    z-index: 2;
+    position: absolute;
+    bottom: 20%;
+    margin-bottom: -70px;
+    right: 5%;
+    visibility: hidden;
+}
+
 html.earth-landscape #cloud1 {
     z-index: 2;
     position: absolute;

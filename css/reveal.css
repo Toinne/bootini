@@ -1498,11 +1498,51 @@ ul.thumbs li img {
 }
 
 /*
-* Landscape override
+* Landscape overrides
 */
 
 html.earth-landscape .space {
     background: -webkit-linear-gradient(top, #152c3e, #37618a) !important;
+}
+
+html.earth-landscape .stars, html.earth-landscape .stars2, html.earth-landscape .stars3 {
+    /*display: none;*/
+}
+
+html.earth-landscape.mars-modifier #ground {
+    background: #B5623F;
+}
+
+html.earth-landscape.mars-modifier .trees {
+    visibility: hidden;
+}
+
+html.earth-landscape.mars-modifier #apex {
+    visibility: hidden;
+}
+
+html.earth-landscape.mars-modifier #cloud1 {
+    visibility: hidden;
+}
+
+html.earth-landscape.mars-modifier #cloud2 {
+    visibility: hidden;
+}
+
+html.earth-landscape.mars-modifier #hills {
+    visibility: hidden;
+}
+
+html.earth-landscape.mars-modifier #mountains {
+    margin-bottom: -100px;
+}
+
+html.earth-landscape.mars-modifier #mountains2 {
+    visibility: visible;
+    -webkit-transform: scale(0.2, 0.1);
+        -ms-transform: scale(0.2, 0.1);
+            transform: scale(0.2, 0.1);
+    margin-bottom: -190px;
 }
 @-webkit-keyframes bounce {
     from {
@@ -1564,6 +1604,15 @@ html.earth-landscape #mountains {
     bottom: 20%;
     margin-bottom: -16px;
     left: 10%;
+}
+
+html.earth-landscape #mountains2 {
+    z-index: 2;
+    position: absolute;
+    bottom: 20%;
+    margin-bottom: -70px;
+    right: 5%;
+    visibility: hidden;
 }
 
 html.earth-landscape #cloud1 {
