@@ -91,3 +91,7 @@ Credit to http://codepen.io/saransh/pen/BKJun
         transform: translateY(-2000px);
     }
 }
+
+.stop-animation .stars, .stop-animation .stars2, .stop-animation .stars3 {
+    animation-play-state: paused;
+}

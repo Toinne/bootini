@@ -1461,74 +1461,40 @@ ul.thumbs li {
     width: 50%;
     float: left;
     text-align: center;
-    padding-top: 200px;
-
-    background-size: 150px;
-    background-repeat: no-repeat;
-    background-position: center;
-
-    -webkit-animation: bounce 20s infinite;
-
-            animation: bounce 20s infinite;
 }
 
-ul.thumbs li.earth {
-    -webkit-animation-delay: 3s;
-            animation-delay: 3s;
-    background-image: url(../img/earth.png);
+ul.thumbs li h6 {
+    font-size: 30px;
 }
 
-ul.thumbs li.mars {
-    -webkit-animation-delay: 5s;
-            animation-delay: 5s;
-    background-image: url(../img/mars.png);
-}
-
-ul.thumbs li.jupiter {
-    -webkit-animation-delay: 0s;
-            animation-delay: 0s;
-    background-image: url(../img/jupiter.png);
-}
-
-ul.thumbs li.gamma {
-    -webkit-animation-delay: 10s;
-            animation-delay: 10s;
-    background-image: url(../img/gamma.png);
+ul.thumbs li img {
+    width: 180px;
+    -webkit-animation: bounce 8s infinite;
+            animation: bounce 8s infinite;
+    -webkit-transform: translateY(-10px);
+        -ms-transform: translateY(-10px);
+            transform: translateY(-10px);
 }
 
 @-webkit-keyframes bounce {
-    0% {
-        background-position: center center;
+    from {
+        -webkit-transform: translateY(-10px);
+                transform: translateY(-10px);
     }
-    25% {
-        background-position: center -1px;
-    }
-    50% {
-        background-position: center center;
-    }
-    75% {
-        background-position: center 1px;
-    }
-    100% {
-        background-position: center center;
+    to {
+        -webkit-transform: translateY(10px);
+                transform: translateY(10px);
     }
 }
 
 @keyframes bounce {
-    0% {
-        background-position: center center;
+    from {
+        -webkit-transform: translateY(-10px);
+                transform: translateY(-10px);
     }
-    25% {
-        background-position: center -1px;
-    }
-    50% {
-        background-position: center center;
-    }
-    75% {
-        background-position: center 1px;
-    }
-    100% {
-        background-position: center center;
+    to {
+        -webkit-transform: translateY(10px);
+                transform: translateY(10px);
     }
 }
 /**********************************************
@@ -1640,4 +1606,9 @@ Credit to http://codepen.io/saransh/pen/BKJun
         -webkit-transform: translateY(-2000px);
                 transform: translateY(-2000px);
     }
+}
+
+.stop-animation .stars, .stop-animation .stars2, .stop-animation .stars3 {
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
 }
