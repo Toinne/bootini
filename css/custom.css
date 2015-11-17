@@ -109,13 +109,13 @@ ul.thumbs li h6 {
 
 ul.thumbs li img {
     width: 180px;
-    animation: bounce 8s infinite;
-    transform: translateY(-10px);
+    animation: bounce 3s infinite;
+    animation-direction: alternate;
 }
 
 @keyframes bounce {
     from {
-        transform: translateY(-10px);
+        transform: translateY(-12px);
     }
     to {
         transform: translateY(10px);
