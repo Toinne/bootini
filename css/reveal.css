@@ -1469,17 +1469,16 @@ ul.thumbs li h6 {
 
 ul.thumbs li img {
     width: 180px;
-    -webkit-animation: bounce 8s infinite;
-            animation: bounce 8s infinite;
-    -webkit-transform: translateY(-10px);
-        -ms-transform: translateY(-10px);
-            transform: translateY(-10px);
+    -webkit-animation: bounce 3s infinite;
+            animation: bounce 3s infinite;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
 }
 
 @-webkit-keyframes bounce {
     from {
-        -webkit-transform: translateY(-10px);
-                transform: translateY(-10px);
+        -webkit-transform: translateY(-12px);
+                transform: translateY(-12px);
     }
     to {
         -webkit-transform: translateY(10px);
@@ -1489,8 +1488,8 @@ ul.thumbs li img {
 
 @keyframes bounce {
     from {
-        -webkit-transform: translateY(-10px);
-                transform: translateY(-10px);
+        -webkit-transform: translateY(-12px);
+                transform: translateY(-12px);
     }
     to {
         -webkit-transform: translateY(10px);
@@ -1608,7 +1607,12 @@ Credit to http://codepen.io/saransh/pen/BKJun
     }
 }
 
-.stop-animation .stars, .stop-animation .stars2, .stop-animation .stars3 {
+.stars, .stars2, .stars3 {
     -webkit-animation-play-state: paused;
             animation-play-state: paused;
+}
+
+.play-animation .stars, .play-animation .stars2, .play-animation .stars3 {
+    -webkit-animation-play-state: running;
+            animation-play-state: running;
 }

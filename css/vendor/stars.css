@@ -92,6 +92,10 @@ Credit to http://codepen.io/saransh/pen/BKJun
     }
 }
 
-.stop-animation .stars, .stop-animation .stars2, .stop-animation .stars3 {
+.stars, .stars2, .stars3 {
     animation-play-state: paused;
+}
+
+.play-animation .stars, .play-animation .stars2, .play-animation .stars3 {
+    animation-play-state: running;
 }
