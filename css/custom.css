@@ -109,15 +109,23 @@ ul.thumbs li h6 {
 
 ul.thumbs li img {
     width: 180px;
-    animation: bounce 3s infinite;
+    animation: planet-bounce 3s infinite;
     animation-direction: alternate;
 }
 
-@keyframes bounce {
+@keyframes planet-bounce {
     from {
         transform: translateY(-12px);
     }
     to {
         transform: translateY(10px);
     }
+}
+
+/*
+* Landscape override
+*/
+
+html.earth-landscape .space {
+    background: -webkit-linear-gradient(top, #152c3e, #37618a) !important;
 }
