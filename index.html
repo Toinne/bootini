@@ -108,6 +108,9 @@
                             <img class="no-styles" src="img/peterke.jpg" width="350">
                         </p>
                     </section>
+                    <section data-state="stop-animation">
+                        <h1 class="counter" data-start="0" data-end="2000"></h1>
+                    </section>
                 </section>
 
                 <section>
@@ -196,6 +199,7 @@
 
         <script src="lib/js/head.min.js"></script>
         <script src="js/reveal.js"></script>
+        <script src="js/countUp.min.js"></script>
         <script>
             // Full list of configuration options available at:
             // https://github.com/hakimel/reveal.js#configuration
@@ -216,6 +220,20 @@
                     { src: 'plugin/zoom-js/zoom.js', async: true },
                     { src: 'plugin/notes/notes.js', async: true }
                 ]
+            });
+
+            Reveal.addEventListener('slidechanged', function(event) {
+                var currentSlide = event.currentSlide;
+                var counters = currentSlide.querySelectorAll('.counter');
+                for (var i = 0; i < counters.length; i++) {
+                    var start = counters[i].getAttribute('data-start');
+                    var end = counters[i].getAttribute('data-end');
+                    var animation = new CountUp(counters[i], start, end);
+
+                    setTimeout(function () {
+                        animation.start();
+                    }, 100);
+                };
             });
         </script>
     </body>
