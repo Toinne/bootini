@@ -266,9 +266,6 @@
                             <img class="no-styles" src="img/peterke.jpg" width="350">
                         </p>
                     </section>
-                    <section data-state="earth-landscape">
-                        <h1 class="counter" data-start="0" data-end="2000"></h1>
-                    </section>
                 </section>
 
                 <section>
@@ -302,54 +299,78 @@
                     <section>
                         <h1>Hackatons</h1>
                         <p>
-                            <img class="no-styles" src="img/invincible.gif" alt="" width="800">
+                            <img class="no-styles" src="img/invincible.gif" alt="" width="600">
                         </p>
                         <!-- @todo -->
                     </section>
                     <section>
                         <h1>Freelance Work</h1>
-                        <p>
-                            <img class="no-styles" src="img/work.gif" alt="" width="400">
-                        </p>
                     </section>
+
                     <section>
                         <h1>The Good</h1>
-                        <ol>
+                        <ul>
                             <li>Earn money</li>
                             <li>Learn new skills</li>
                             <li>Learn from your mistakes</li>
-                        </ol>
+                        </ul>
                     </section>
                     <section>
                         <h1>The Bad</h1>
-                        <ol>
-                            <li>Deadlines</li>
+                        <ul>
                             <li>Clients who change their mind constantly</li>
-                        </ol>
+                            <li>Deadlines</li>
+                        </ul>
                     </section>
+
                     <section>
                         <h1>Tips</h1>
                         <ol>
-                            <li>Turning down clients</li>
                             <li>Don't get blinded by money, get blinded by passion!</li>
                             <li>Ask yourself: "Will I learn something?"</li>
                             <li>Be clear about what you will do and what you wont do</li>
                             <li>Use a middleman</li>
                         </ol>
                     </section>
+
+                    <section data-background-image="img/crammerock.png">
+                    </section>
                     <section>
-                        <h2>Contributing to<br />open source projects</h2>
-                        <ul class="fragment">
-                            <li>I'm not good enough</li>
-                            <li>I don't know the best solution</li>
-                            <li>I'll make things worse</li>
-                            <li>I'll be mocked or insulted</li>
+                        <h1>Crammerock</h1>
+                    </section>
+                    <section>
+                        <h1><span class="counter" data-start="0" data-end="847689">0</span> Pageviews</h1>
+                        <p><em>1 Aug 2015 - 8 Sep 2015</em></p>
+                    </section>
+                    <section>
+                        <h1><span class="counter" data-start="0" data-end="110097">0</span> Visitors</h1>
+                        <p><em>1 Aug 2015 - 8 Sep 2015</em></p>
+                    </section>
+
+                    <section>
+                        <h1>Contributing to open source projects</h1>
+                    </section>
+                    <section>
+                        <h1>Why</h1>
+                        <ul>
+                            <li>Learn by doing</li>
+                            <li>Bolster your CV</li>
+                            <li>Meet new coders</li>
                         </ul>
                     </section>
                     <section>
                         <p>
                             <img class="no-styles" src="img/first-pr.png" alt="" width="800">
                         </p>
+                    </section>
+                    <section>
+                        <h1>Fear</h1>
+                        <ul>
+                            <li>I'm not good enough</li>
+                            <li>I don't know the best solution</li>
+                            <li>I'll make things worse</li>
+                            <li>I'll be mocked or insulted</li>
+                        </ul>
                     </section>
                 </section>
 
@@ -390,13 +411,22 @@
                 ]
             });
 
+            var counterOptions = {
+                useEasing : true,
+                useGrouping : true,
+                separator : '.',
+                decimal : ',',
+                prefix : '',
+                suffix : ''
+            };
+
             Reveal.addEventListener('slidechanged', function(event) {
                 var currentSlide = event.currentSlide;
                 var counters = currentSlide.querySelectorAll('.counter');
                 for (var i = 0; i < counters.length; i++) {
                     var start = counters[i].getAttribute('data-start');
                     var end = counters[i].getAttribute('data-end');
-                    var animation = new CountUp(counters[i], start, end);
+                    var animation = new CountUp(counters[i], start, end, 0, 3, counterOptions);
 
                     setTimeout(function () {
                         animation.start();
