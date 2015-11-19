@@ -9,6 +9,10 @@ body {
     margin: 0;
 }
 
+.reveal .slides {
+    z-index: 3;
+}
+
 /*
 * Buzz lightyear
 * ==============
