@@ -245,7 +245,23 @@
                         </p>
                     </section>
                     <section data-state="earth-landscape">
-                        <h1>Astronaut training</h1>
+                        <h1>
+                            I want to be a
+                        </h1>
+                        <h2 class="jobs">Web developer</h2>
+                    </section>
+                    <section data-state="earth-landscape">
+                        <h1>
+                           We hearted <3
+                        </h1>
+                    </section>
+                    <section data-state="earth-landscape">
+                        <h1>
+                            We hated
+                        </h1>
+                    </section>
+                    <section data-state="earth-landscape">
+                        <h2>Have your picture taken</h2>
                         <p>
                             <img class="no-styles" src="img/peterke.jpg" width="350">
                         </p>
@@ -386,6 +402,29 @@
                     }, 100);
                 };
             });
+
+            var jobs = [
+                'Web developer',
+                'System engineer',
+                'Database administrator',
+                'Test engineer',
+                'Process technician',
+                'Electronic engineer',
+                'Potato'
+            ];
+
+            var jobContainer = document.querySelector('.jobs'),
+                index = 0;
+
+            window.setInterval(function() {
+                index++;
+
+                if (index >= jobs.length) {
+                    index = 0;
+                }
+
+                jobContainer.textContent = jobs[index];
+            }, 4000);
         </script>
     </body>
 </html>
