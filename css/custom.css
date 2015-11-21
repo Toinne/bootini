@@ -169,6 +169,8 @@ html.earth-landscape .stars, html.earth-landscape .stars2, html.earth-landscape 
     /*display: none;*/
 }
 
+/* Mars */
+
 html.earth-landscape.mars-modifier #ground {
     background: #B5623F;
 }
@@ -202,3 +204,52 @@ html.earth-landscape.mars-modifier #mountains2 {
     transform: scale(0.2, 0.1);
     margin-bottom: -190px;
 }
+
+/* Jupiter */
+
+html.earth-landscape.jupiter-modifier #ground {
+    background: #867A6D;
+}
+
+html.earth-landscape.jupiter-modifier .trees {
+    visibility: hidden;
+}
+
+html.earth-landscape.jupiter-modifier #apex {
+    visibility: hidden;
+}
+
+html.earth-landscape.jupiter-modifier #cloud1 {
+    visibility: hidden;
+}
+
+html.earth-landscape.jupiter-modifier #cloud2 {
+    visibility: hidden;
+}
+
+html.earth-landscape.jupiter-modifier #hills {
+    visibility: hidden;
+}
+
+html.earth-landscape.jupiter-modifier #mountains  {
+    visibility: hidden;
+}
+
+html.earth-landscape.jupiter-modifier #mountains3  {
+    visibility: visible;
+}
+
+html.earth-landscape.jupiter-modifier #mountains4  {
+    margin-bottom: -100px;
+}
+
+html.earth-landscape.jupiter-modifier #mountains4 {
+    visibility: visible;
+    transform: scale(0.2, 0.1);
+    margin-bottom: -190px;
+}
+
+html.earth-landscape.jupiter-modifier #mountains5 {
+    visibility: visible;
+}
+

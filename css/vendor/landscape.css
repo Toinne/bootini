@@ -68,6 +68,35 @@ html.earth-landscape #mountains2 {
     visibility: hidden;
 }
 
+html.earth-landscape #mountains3 {
+    z-index: 2;
+    position: absolute;
+    bottom: 20%;
+    margin-bottom: -235px;
+    left: 10%;
+    visibility: hidden;
+    transform: scale(0.7, 0.3);
+}
+
+html.earth-landscape #mountains4 {
+    z-index: 2;
+    position: absolute;
+    bottom: 20%;
+    margin-bottom: -70px;
+    right: 5%;
+    visibility: hidden;
+}
+
+html.earth-landscape #mountains5 {
+    z-index: 2;
+    position: absolute;
+    bottom: 20%;
+    margin-bottom: -235px;
+    left: 25%;
+    visibility: hidden;
+    transform: scale(0.1, 0.1);
+}
+
 html.earth-landscape #cloud1 {
     z-index: 2;
     position: absolute;

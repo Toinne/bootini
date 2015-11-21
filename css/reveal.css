@@ -1553,6 +1553,8 @@ html.earth-landscape .stars, html.earth-landscape .stars2, html.earth-landscape 
     /*display: none;*/
 }
 
+/* Mars */
+
 html.earth-landscape.mars-modifier #ground {
     background: #B5623F;
 }
@@ -1587,6 +1589,56 @@ html.earth-landscape.mars-modifier #mountains2 {
         -ms-transform: scale(0.2, 0.1);
             transform: scale(0.2, 0.1);
     margin-bottom: -190px;
+}
+
+/* Jupiter */
+
+html.earth-landscape.jupiter-modifier #ground {
+    background: #867A6D;
+}
+
+html.earth-landscape.jupiter-modifier .trees {
+    visibility: hidden;
+}
+
+html.earth-landscape.jupiter-modifier #apex {
+    visibility: hidden;
+}
+
+html.earth-landscape.jupiter-modifier #cloud1 {
+    visibility: hidden;
+}
+
+html.earth-landscape.jupiter-modifier #cloud2 {
+    visibility: hidden;
+}
+
+html.earth-landscape.jupiter-modifier #hills {
+    visibility: hidden;
+}
+
+html.earth-landscape.jupiter-modifier #mountains  {
+    visibility: hidden;
+}
+
+html.earth-landscape.jupiter-modifier #mountains3  {
+    visibility: visible;
+}
+
+html.earth-landscape.jupiter-modifier #mountains4  {
+    margin-bottom: -100px;
+}
+
+html.earth-landscape.jupiter-modifier #mountains4 {
+    visibility: visible;
+    -webkit-transform: scale(0.2, 0.1);
+        -ms-transform: scale(0.2, 0.1);
+            transform: scale(0.2, 0.1);
+    margin-bottom: -190px;
+}
+
+html.earth-landscape.jupiter-modifier #mountains5 {
+    visibility: visible;
 }
 @-webkit-keyframes bounce {
     from {
@@ -1657,6 +1709,39 @@ html.earth-landscape #mountains2 {
     margin-bottom: -70px;
     right: 5%;
     visibility: hidden;
+}
+
+html.earth-landscape #mountains3 {
+    z-index: 2;
+    position: absolute;
+    bottom: 20%;
+    margin-bottom: -235px;
+    left: 10%;
+    visibility: hidden;
+    -webkit-transform: scale(0.7, 0.3);
+        -ms-transform: scale(0.7, 0.3);
+            transform: scale(0.7, 0.3);
+}
+
+html.earth-landscape #mountains4 {
+    z-index: 2;
+    position: absolute;
+    bottom: 20%;
+    margin-bottom: -70px;
+    right: 5%;
+    visibility: hidden;
+}
+
+html.earth-landscape #mountains5 {
+    z-index: 2;
+    position: absolute;
+    bottom: 20%;
+    margin-bottom: -235px;
+    left: 25%;
+    visibility: hidden;
+    -webkit-transform: scale(0.1, 0.1);
+        -ms-transform: scale(0.1, 0.1);
+            transform: scale(0.1, 0.1);
 }
 
 html.earth-landscape #cloud1 {
