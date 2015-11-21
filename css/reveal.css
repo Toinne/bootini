@@ -1351,6 +1351,10 @@ body {
     z-index: 3;
 }
 
+.reveal.center, .reveal.center .slides, .reveal.center .slides section {
+    min-height: 400px !important;
+}
+
 /*
 * Buzz lightyear
 * ==============
@@ -1484,10 +1488,39 @@ ul.thumbs li img {
             animation-direction: alternate;
 }
 
+ul.thumbs li:nth-child(1) img {
+    -webkit-animation-delay: 0.1s;
+            animation-delay: 0.1s;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+}
+
+ul.thumbs li:nth-child(2) img {
+    -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+}
+
+ul.thumbs li:nth-child(3) img {
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+    -webkit-animation-duration: 5s;
+            animation-duration: 5s;
+}
+
+ul.thumbs li:nth-child(4) img {
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+}
+
+
 @-webkit-keyframes planet-bounce {
     from {
-        -webkit-transform: translateY(-12px);
-                transform: translateY(-12px);
+        -webkit-transform: translateY(-15px);
+                transform: translateY(-15px);
     }
     to {
         -webkit-transform: rotate(359deg);
@@ -1495,10 +1528,11 @@ ul.thumbs li img {
     }
 }
 
+
 @keyframes planet-bounce {
     from {
-        -webkit-transform: translateY(-12px);
-                transform: translateY(-12px);
+        -webkit-transform: translateY(-15px);
+                transform: translateY(-15px);
     }
     to {
         -webkit-transform: rotate(359deg);
@@ -1508,6 +1542,7 @@ ul.thumbs li img {
 
 /*
 * Landscape overrides
+* ===============
 */
 
 html.earth-landscape .space {

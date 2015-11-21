@@ -13,6 +13,10 @@ body {
     z-index: 3;
 }
 
+.reveal.center, .reveal.center .slides, .reveal.center .slides section {
+    min-height: 400px !important;
+}
+
 /*
 * Buzz lightyear
 * ==============
@@ -122,18 +126,39 @@ ul.thumbs li img {
     animation-direction: alternate;
 }
 
+ul.thumbs li:nth-child(1) img {
+    animation-delay: 0.1s;
+    animation-duration: 2s;
+}
+
+ul.thumbs li:nth-child(2) img {
+    animation-delay: 0.4s;
+    animation-duration: 3s;
+}
+
+ul.thumbs li:nth-child(3) img {
+    animation-delay: 1s;
+    animation-duration: 5s;
+}
+
+ul.thumbs li:nth-child(4) img {
+    animation-delay: 0.3s;
+    animation-duration: 3s;
+}
+
+
 @keyframes planet-bounce {
     from {
-        transform: translateY(-12px);
+        transform: translateY(-15px);
     }
     to {
-        -webkit-transform: rotate(359deg);
-                transform: rotate(359deg);
+        transform: rotate(359deg);
     }
 }
 
 /*
 * Landscape overrides
+* ===============
 */
 
 html.earth-landscape .space {
