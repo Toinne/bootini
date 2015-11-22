@@ -258,3 +258,11 @@ html.earth-landscape.jupiter-modifier #mountains5 {
 .text-shadow-small {
     text-shadow: #000 1px 1px 1px !important;
 }
+
+/**
+ * Twitter Tweets
+ * ==============
+ */
+.twitter-tweet {
+    margin: 10px auto !important;
+}
