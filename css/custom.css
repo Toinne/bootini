@@ -1,8 +1,7 @@
-/*
-* Custom flavour
-* ==============
-*/
-
+/**
+ * Custom flavour
+ * ==============
+ */
 body {
     -webkit-font-smoothing: antialiased;
     padding: 0;
@@ -17,11 +16,10 @@ body {
     min-height: 400px !important;
 }
 
-/*
-* Buzz lightyear
-* ==============
-*/
-
+/**
+ * Buzz lightyear
+ * ==============
+ */
 .buzz {
     -moz-transform: scaleX(-1);
     -o-transform: scaleX(-1);
@@ -63,11 +61,10 @@ body {
     }
 }
 
-/*
-* Remove all image styles
-* =======================
+/**
+ * Remove all image styles
+ * =======================
 */
-
 .reveal section img.no-styles {
     margin: 0;
     background: inherit;
@@ -75,11 +72,10 @@ body {
     box-shadow: none;
 }
 
-/*
-* About
-* =====
-*/
-
+/**
+ * About
+ * =====
+ */
 section.about {
     position: relative;
 }
@@ -104,11 +100,10 @@ section.about .anthony {
     background: url('../img/anthony.png') no-repeat;
 }
 
-/*
-* Overview thumbs
-* ===============
-*/
-
+/**
+ * Overview thumbs
+ * ===============
+ */
 ul.thumbs li {
     display: inline-block;
     width: 50%;
@@ -156,11 +151,10 @@ ul.thumbs li:nth-child(4) img {
     }
 }
 
-/*
-* Landscape overrides
-* ===============
-*/
-
+/**
+ * Landscape overrides
+ * ===================
+ */
 html.earth-landscape .space {
     background: -webkit-linear-gradient(top, #152c3e, #37618a) !important;
 }
@@ -169,8 +163,10 @@ html.earth-landscape .stars, html.earth-landscape .stars2, html.earth-landscape 
     /*display: none;*/
 }
 
-/* Mars */
-
+/**
+ * Mars
+ * ====
+ */
 html.earth-landscape.mars-modifier #ground {
     background: #B5623F;
 }
@@ -205,8 +201,10 @@ html.earth-landscape.mars-modifier #mountains2 {
     margin-bottom: -190px;
 }
 
-/* Jupiter */
-
+/**
+ * Jupiter
+ * =======
+ */
 html.earth-landscape.jupiter-modifier #ground {
     background: #867A6D;
 }
@@ -253,3 +251,10 @@ html.earth-landscape.jupiter-modifier #mountains5 {
     visibility: visible;
 }
 
+/**
+ * Text Effects
+ * ============
+ */
+.text-shadow-small {
+    text-shadow: #000 1px 1px 1px !important;
+}
