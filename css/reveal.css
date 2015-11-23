@@ -1647,6 +1647,7 @@ html.earth-landscape.jupiter-modifier #mountains5 {
  * Text Effects
  * ============
  */
+.text-shadow-small h1,
 .text-shadow-small {
     text-shadow: #000 1px 1px 1px !important;
 }
