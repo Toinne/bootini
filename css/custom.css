@@ -38,9 +38,12 @@ body {
 
     animation-name: fly;
     animation-duration: 10s;
-    animation-delay: 5s;
+    animation-delay: 13s;
     animation-fill-mode: forwards;
-    /*animation-iteration-count: 3;*/
+}
+
+.repeat-buzz .buzz {
+    animation-iteration-count: infinite;
 }
 
 
