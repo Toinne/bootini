@@ -323,6 +323,14 @@
                             <img class="no-styles" src="img/peterke.jpg" width="350">
                         </p>
                     </section>
+
+                    <section data-background-image="img/before-takeoff.jpg">
+                        <div id="countdown"></div>
+                    </section>
+
+                    <section data-background-image="img/takeoff-big.jpg">
+                        <h1></h1>
+                    </section>
                 </section>
 
                 <section>
@@ -336,11 +344,10 @@
                     </section>
 
                     <!-- anthony -->
+                    <!-- @todo Hans: Replace stackoverflow with logo -->
                     <section data-state="earth-landscape mars-modifier">
                         <h1>Stackoverflow</h1>
-                        <p>
-                            <img class="no-styles" src="img/stackoverflow.png" />
-                        </p>
+                        <p><img class="no-styles" src="img/stackoverflow.png" /></p>
                     </section>
 
                     <!-- anthony, short introduction -->
@@ -394,8 +401,7 @@
 
                 </section>
 
-                <section data-background-image="img/resupplying.jpg">
-                </section>
+                <section data-background-image="img/resupplying.jpg"></section>
 
                 <section>
                     <!-- hans -->
@@ -480,8 +486,7 @@
                     </section>
 
                     <!-- hans -->
-                    <section data-background-image="img/crammerock.png">
-                    </section>
+                    <section data-background-image="img/crammerock.png"></section>
 
                     <!-- hans -->
                     <section data-state="earth-landscape jupiter-modifier">
@@ -538,9 +543,7 @@
 
                     <!-- hans -->
                     <section data-state="earth-landscape jupiter-modifier">
-                        <p>
-                            <img class="no-styles" src="img/first-pr.png" alt="" width="800">
-                        </p>
+                        <p><img class="no-styles" src="img/first-pr.png" alt="" width="800"></p>
                     </section>
 
                     <!-- @todo Anthony: Insert slides about hacktoberfest -->
@@ -550,9 +553,7 @@
                     <section>
                         <h1>Gamma Ray Burst</h1>
                         <h3><em>A new era is born</em></h3>
-                        <p>
-                            <img class="no-styles spin" src="img/gammarayburst.png" width="1500">
-                        </p>
+                        <p><img class="no-styles spin" src="img/gammarayburst.png" width="1500"></p>
                     </section>
 
                     <!-- @todo Hans: Insert conclusion, grabblr and question slides -->
@@ -563,6 +564,8 @@
         <script src="lib/js/head.min.js"></script>
         <script src="js/reveal.js"></script>
         <script src="js/countUp.min.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery.countdown.min.js"></script>
         <script>
             // Full list of configuration options available at:
             // https://github.com/hakimel/reveal.js#configuration
@@ -606,15 +609,29 @@
                         animation.start();
                     }, 100);
                 };
+
+                var time = new Date();
+                time.setSeconds(time.getSeconds() + 5);
+
+                $(currentSlide)
+                    .find('#countdown')
+                    .countdown(time, function(event) {
+                        $(this).html(
+                            event.strftime('<span>%H</span><span>:</span><span>%M</span><span>:</span><span>%S</span>')
+                        );
+                    })
+                    .on('finish.countdown', function() {
+                        Reveal.down();
+                    });
             });
 
             var jobs = [
                 'Web developer',
-                'System engineer',
-                'Database administrator',
-                'Test engineer',
-                'Process technician',
-                'Electronic engineer',
+                'System Engineer',
+                'Database Administrator',
+                'Test Engineer',
+                'Process Technician',
+                'Electronic Engineer',
                 'Potato'
             ];
 

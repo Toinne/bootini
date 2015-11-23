@@ -1667,6 +1667,26 @@ ul.media-grid > li {
     float: left;
     width: 50%;
 }
+
+/**
+ * Countdown
+ * =========
+ */
+@font-face {
+    font-family: "Digi";
+    src: url(../fonts/digital.ttf);
+}
+
+#countdown {
+    font-size: 100px;
+    font-family: "Digi";
+}
+
+#countdown span {
+    color: #ffff00;
+    background: #202020;
+    padding: 0px 20px 20px 20px;
+}
 @-webkit-keyframes bounce {
     from {
         -webkit-transform: translateY(0px);
