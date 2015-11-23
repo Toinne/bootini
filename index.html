@@ -475,8 +475,6 @@
                         <h1>Freelance Work</h1>
                     </section>
 
-                    <!-- @todo Anthony: insert slide about excuses to not fix computer -->
-
                     <!-- hans -->
                     <section data-state="earth-landscape jupiter-modifier">
                         <h1>The Good</h1>
@@ -505,6 +503,7 @@
                             <li>Ask yourself: "Will I learn something?"</li>
                             <li>Be clear about what you will do and what you wont do</li>
                             <li>Use a middleman</li>
+                            <li>Think of excuses: "<span class="excuses">Sorry I have a mac</span>"</li>
                         </ol>
                     </section>
 
@@ -696,6 +695,30 @@
 
                 jobContainer.textContent = jobs[index];
             }, 4000);
+
+            var exuses = [
+                'Sorry I have a mac',
+                'That will costs you about 9000 euro',
+                'That\'s forbidden by the NSA',
+                'We will learn that next year',
+                'You want to see a magic trick ?',
+                '~Google the problem and send the first link~',
+                'Sorry I can\'t foobar it'
+            ];
+
+            var excusesContainer = document.querySelector('.excuses'),
+                excusesIndex = 0;
+
+            window.setInterval(function() {
+                excusesIndex++;
+
+                if (excusesIndex >= exuses.length) {
+                    excusesIndex = 0;
+                }
+
+                excusesContainer.textContent = exuses[excusesIndex];
+            }, 4000);
+
         </script>
     </body>
 </html>
