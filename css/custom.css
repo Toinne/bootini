@@ -266,3 +266,16 @@ html.earth-landscape.jupiter-modifier #mountains5 {
 .twitter-tweet {
     margin: 10px auto !important;
 }
+
+/**
+ * Media Grid
+ * ==========
+ */
+ul.media-grid {
+    list-style: none !important;
+}
+
+ul.media-grid > li {
+    float: left;
+    width: 50%;
+}
